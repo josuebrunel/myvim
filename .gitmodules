@@ -40,3 +40,6 @@
 [submodule "bundlegit"]
 	path = bundlegit
 	url = https://github.com/vim-scripts/TaskList.vim.git
+[submodule "YouCompleteMe"]
+	path = YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git
