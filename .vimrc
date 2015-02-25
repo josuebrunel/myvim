@@ -8,6 +8,12 @@ set smarttab " make "tab" insert indents instead of tabs at the beginning of a l
 set expandtab " always uses spaces instead of tab characters
 set backspace=2 " Fixes backspace issues
 
+"Syntax highlighting and validation
+syntax on                           " syntax highlighing
+filetype on                          " try to detect filetypes
+filetype plugin indent on    " enable loading indent file for filetype
+
+
 "call pathogen#runtime_append_all_bundles()
 call pathogen#infect()
 call pathogen#helptags()
@@ -33,11 +39,6 @@ map <leader>td <Plug>TaskList
 "Revision History
 map <leader>g :GundoToggle<CR>
 
-"Syntax highlighting and validation
-syntax on                           " syntax highlighing
-filetype on                          " try to detect filetypes
-filetype plugin indent on    " enable loading indent file for filetype
-
 "Pep8
 let g:pep8_map='<leader>8'
 
@@ -50,3 +51,6 @@ set completeopt=menuone,longest,preview
 "Auto Indent Python
 set cindent
 autocmd FileType python setlocal foldmethod=indent smartindent shiftwidth=4 ts=4 et cinwords=if,elif,else,for,while,try,except,finally,def,class
+
+"Jedi 
+
