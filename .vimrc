@@ -6,9 +6,11 @@ set shiftwidth=4 " indent width
 set softtabstop=4 " dealing with combination of space and tab used to simulate ...
 set smarttab " make "tab" insert indents instead of tabs at the beginning of a line
 set expandtab " always uses spaces instead of tab characters
+set backspace=2 " Fixes backspace issues
 
 "call pathogen#runtime_append_all_bundles()
-"call pathogen#helptags()
+call pathogen#infect()
+call pathogen#helptags()
 
 "Code Folding
 set foldmethod=indent
