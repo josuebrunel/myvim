@@ -54,10 +54,10 @@ autocmd FileType python setlocal foldmethod=indent smartindent shiftwidth=4 ts=4
 
 " Loading .sh file headers
 "
-autocmd bufnewfile *.php, *.sh,*.py,*.rb,*.c so $HOME/.scripts/headers/header.txt
-autocmd bufnewfile *.php, *.sh,*.py,*.rb,*.c exe "1," . 10 . "g/Author          :.*/s//Author          :" 'josuebrunel'
-autocmd bufnewfile *.php, *.sh,*.py,*.rb,*.c exe "1," . 10 . "g/Filename        :.*/s//Filename        : " .expand("%")
-autocmd bufnewfile *.php, *.sh,*.py,*.rb,*.c exe "1," . 10 . "g/Creation Date   :.*/s//Creation Date   : " .strftime("%d-%m-%Y")
+autocmd bufnewfile *.php,*.sh,*.py,*.rb,*.c so $HOME/.scripts/headers/header.txt
+autocmd bufnewfile *.php,*.sh,*.py,*.rb,*.c exe "1," . 10 . "g/Author          :.*/s//Author          :" 'josuebrunel'
+autocmd bufnewfile *.php,*.sh,*.py,*.rb,*.c exe "1," . 10 . "g/Filename        :.*/s//Filename        : " .expand("%")
+autocmd bufnewfile *.php,*.sh,*.py,*.rb,*.c exe "1," . 10 . "g/Creation Date   :.*/s//Creation Date   : " .strftime("%d-%m-%Y")
 autocmd Bufwritepre,filewritepre *.sh,*.py,*.rb,*.c execute "normal ma"
 autocmd Bufwritepre,filewritepre *.sh,*.py,*.rb,*.c exe "1," . 10 . "g/Last Modified   :.*/s/Last Modified   :.*/Last Modified   : " .strftime("%c")
 autocmd bufwritepost,filewritepost *.sh,*.py,*.rb,*.c execute "normal `a"
