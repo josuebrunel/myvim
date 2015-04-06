@@ -52,6 +52,11 @@ set completeopt=menuone,longest,preview
 set cindent
 autocmd FileType python setlocal foldmethod=indent smartindent shiftwidth=4 ts=4 et cinwords=if,elif,else,for,while,try,except,finally,def,class
 
+"Rmmenber last position
+if has("autocmd")
+      au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+  endif
+
 " Loading .sh file headers
 "
 autocmd bufnewfile *.php,*.sh,*.py,*.rb,*.c so $HOME/.scripts/headers/header.txt
