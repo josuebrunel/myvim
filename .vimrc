@@ -70,7 +70,7 @@ let g:syntastic_check_on_wq = 0
 "Rmmenber last position
 if has("autocmd")
       au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-  endif
+endif
 
 " Loading .sh file headers
 "

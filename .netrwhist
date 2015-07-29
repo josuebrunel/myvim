@@ -1,8 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/Users/josue/Dropbox/Workspace/devops/.git'
-let g:netrw_dirhist_2='/Users/josue/.scripts'
-let g:netrw_dirhist_3='/Users/josue/.vim'
-let g:netrw_dirhist_4='/Users/josue/.scripts/.git'
-let g:netrw_dirhist_5='/Users/josue/Dropbox/workspace/loking/myql/myql/contrib/table'
-let g:netrw_dirhist_6='/Users/josue/Dropbox/Workspace/loking/myql/myql/contrib/table'
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/Users/josue/Dropbox/Workspace/supinfo/6rv/sixriv/poster'
+let g:netrw_dirhist_2='/Users/josue/Dropbox/Workspace/projects/django_crud/books_fbv'
+let g:netrw_dirhist_3='/Users/josue/.vim/autoload'
