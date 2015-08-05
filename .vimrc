@@ -83,3 +83,5 @@ autocmd bufnewfile *.php,*.sh,*.py,*.rb,*.c exe "1," . 10 . "g/Creation Date   :
 autocmd Bufwritepre,filewritepre *.sh,*.py,*.rb,*.c execute "normal ma"
 autocmd Bufwritepre,filewritepre *.sh,*.py,*.rb,*.c exe "1," . 10 . "g/Last Modified   :.*/s/Last Modified   :.*/Last Modified   : " .strftime("%c")
 autocmd bufwritepost,filewritepost *.sh,*.py,*.rb,*.c execute "normal `a"
+
+autocmd FileType html set omnifunc=htmlcomplete#CoompleteTags
