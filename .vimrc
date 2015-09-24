@@ -54,6 +54,9 @@ set backspace=2 " Fixes backspace issues
 set autoindent "always set autoindenting on
 set copyindent "copy the previous indentation on autoindenting
 
+set wildmenu
+set wildmode=list,longest,list,full
+
 "Clear highlight search
 nmap <silent> ,/ :nohlsearch<CR>
 
