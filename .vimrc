@@ -27,6 +27,8 @@ Plugin 'file:///home/gmarik/path/to/plugin'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Avoid a name conflict with L9
 Plugin 'user/L9', {'name': 'newL9'}
+" vim-go plugin
+Plugin 'fatih/vim-go'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -128,4 +130,5 @@ autocmd Bufwritepre,filewritepre *.sh,*.py,*.rb,*.c execute "normal ma"
 autocmd Bufwritepre,filewritepre *.sh,*.py,*.rb,*.c exe "1," . 10 . "g/Last Modified   :.*/s/Last Modified   :.*/Last Modified   : " .strftime("%c")
 autocmd bufwritepost,filewritepost *.sh,*.py,*.rb,*.c execute "normal `a"
 
-autocmd FileType html set omnifunc=htmlcomplete#CoompleteTags
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+iabbrev <// </<C-X><C-O>
