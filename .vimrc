@@ -138,4 +138,3 @@ autocmd bufwritepost,filewritepost *.sh,*.py,*.rb,*.c execute "normal `a"
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 iabbrev <// </<C-X><C-O>
 
-autocmd BufRead,BufNewFile /etc/nginx/*,/usr/local/nginx/conf/* if &ft == '' | setfiletype nginx | endif
