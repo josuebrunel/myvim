@@ -135,6 +135,9 @@ autocmd Bufwritepre,filewritepre *.sh,*.py,*.rb,*.c execute "normal ma"
 autocmd Bufwritepre,filewritepre *.sh,*.py,*.rb,*.c exe "1," . 10 . "g/Last Modified   :.*/s/Last Modified   :.*/Last Modified   : " .strftime("%c")
 autocmd bufwritepost,filewritepost *.sh,*.py,*.rb,*.c execute "normal `a"
 
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 iabbrev <// </<C-X><C-O>
 
+" pretty json
+command PrettyJSON %!python -m json.tool 
