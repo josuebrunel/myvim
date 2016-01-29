@@ -82,6 +82,19 @@ set foldlevel=99
 "Vertical Split : Ctrl+w + v
 "Horizontal Split: Ctrl+w + s
 "Close current windows: Ctrl+w + q
+"
+
+"syntastic
+set laststatus=2
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+set statusline+=%f
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 "Ctrl movement keymap to move around windows
 map <c-j> <c-w>j
@@ -108,18 +121,6 @@ set completeopt=menuone,longest,preview
 set cindent
 autocmd FileType python setlocal foldmethod=indent smartindent shiftwidth=4 ts=4 et cinwords=if,elif,else,for,while,try,except,finally,def,class
 
-"Golang
-set laststatus=2
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-set statusline+=%f
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
 "Rmmenber last position
 if has("autocmd")
       au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
@@ -137,6 +138,7 @@ autocmd bufwritepost,filewritepost *.sh,*.py,*.rb,*.c execute "normal `a"
 
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd BufWritePre *.py :%s/\s\+$//e
 iabbrev <// </<C-X><C-O>
 
 " pretty json
