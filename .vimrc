@@ -139,8 +139,12 @@ autocmd bufwritepost,filewritepost *.sh,*.py,*.rb,*.c execute "normal `a"
 
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-autocmd BufWritePre *.py :%s/\s\+$//e
+
+" auto remove trailing spaces
+autocmd BufWritePre,FileWritePre * :%s/\s\+$//e
+autocmd BufWritePost,FileWritePost * :%s/\s\+$//e
+
 iabbrev <// </<C-X><C-O>
 
 " pretty json
-command PrettyJSON %!python -m json.tool 
+command PrettyJSON %!python -m json.tool
