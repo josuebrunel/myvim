@@ -136,6 +136,7 @@ autocmd bufnewfile *.php,*.sh,*.py,*.rb,*.c exe "1," . 10 . "g/Creation Date   :
 autocmd Bufwritepre,filewritepre *.sh,*.py,*.rb,*.c execute "normal ma"
 autocmd Bufwritepre,filewritepre *.sh,*.py,*.rb,*.c exe "1," . 10 . "g/Last Modified   :.*/s/Last Modified   :.*/Last Modified   : " .strftime("%c")
 autocmd bufwritepost,filewritepost *.sh,*.py,*.rb,*.c execute "normal `a"
+autocmd BufRead,BufNewFile *.robot,*.robots set filetype=robots
 
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
