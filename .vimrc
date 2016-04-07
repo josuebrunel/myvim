@@ -112,18 +112,18 @@ map <leader>g :GundoToggle<CR>
 "Pep8
 let g:pep8_map='<leader>8'
 au BufNewFile,BufRead *.py
-    \ set tabstop=4
-    \ set softtabstop=4
-    \ set shiftwidth=4
-    \ set textwidth=79
-    \ set expandtab
-    \ set autoindent
-    \ set fileformat=unix
+    \set tabstop=4
+    \set softtabstop=4
+    \set shiftwidth=4
+    \set textwidth=79
+    \set expandtab
+    \set autoindent
+    \set fileformat=unix
 
 au BufNewFile,BufRead *.js, *.html, *.css
-    \ set tabstop=2
-    \ set softtabstop=2
-    \ set shiftwidth=2
+    \set tabstop=2
+    \set softtabstop=2
+    \set shiftwidth=2
 
 "Tab completion and documentation
 au FileType python set omnifunc=pythoncomplete#Complete
@@ -150,15 +150,6 @@ if has("autocmd")
       au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
-" Loading .sh file headers
-"
-autocmd bufnewfile *.php,*.sh,*.py,*.rb,*.c so $HOME/.scripts/headers/header.txt
-autocmd bufnewfile *.php,*.sh,*.py,*.rb,*.c exe "1," . 10 . "g/Author          :.*/s//Author          :" 'josuebrunel'
-autocmd bufnewfile *.php,*.sh,*.py,*.rb,*.c exe "1," . 10 . "g/Filename        :.*/s//Filename        : " .expand("%")
-autocmd bufnewfile *.php,*.sh,*.py,*.rb,*.c exe "1," . 10 . "g/Creation Date   :.*/s//Creation Date   : " .strftime("%d-%m-%Y")
-autocmd Bufwritepre,filewritepre *.sh,*.py,*.rb,*.c execute "normal ma"
-autocmd Bufwritepre,filewritepre *.sh,*.py,*.rb,*.c exe "1," . 10 . "g/Last Modified   :.*/s/Last Modified   :.*/Last Modified   : " .strftime("%c")
-autocmd bufwritepost,filewritepost *.sh,*.py,*.rb,*.c execute "normal `a"
 autocmd BufRead,BufNewFile *.robot,*.robots set filetype=robots
 
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
