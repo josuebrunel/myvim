@@ -88,3 +88,6 @@
 [submodule "bundle/salt-vim"]
 	path = bundle/salt-vim
 	url = https://github.com/saltstack/salt-vim
+[submodule "bundle/pyflakes-vim"]
+	path = bundle/pyflakes-vim
+	url = https://github.com/kevinw/pyflakes-vim
