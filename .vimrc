@@ -31,10 +31,10 @@ Plugin 'user/L9', {'name': 'newL9'}
 Plugin 'fatih/vim-go'
 
 " All of your "Plugins must be added before the following line
-"call vundle#end()            " required
-"filetype plugin indent on    " required
+call vundle#end()            " required
+filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
-"filetype plugin on
+filetype plugin on
 "
 " Brief help
 " :"PluginList       - lists configured plugins
@@ -163,3 +163,9 @@ iabbrev <// </<C-X><C-O>
 
 " pretty json
 command PrettyJSON %!python -m json.tool
+
+" pretty xml
+command PrettyXML %!xmllint --format -
+
+autocmd BufNewFile,BufRead *.json PrettyJSON
+autocmd BufNewFile,BufRead *.xml, *.rss, *.wsdl PrettyXML
