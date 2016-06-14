@@ -139,6 +139,9 @@ if 'VIRTUAL_ENV' in os.environ:
   execfile(activate_this, dict(__file__=activate_this))
 EOF
 
+"flake8 ignore line too long
+let g:syntastic_python_flake8_args='--ignore=E501'
+
 set completeopt=menuone,longest,preview
 
 "Auto Indent Python
