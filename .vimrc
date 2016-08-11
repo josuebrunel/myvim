@@ -170,5 +170,5 @@ command PrettyJSON %!python -m json.tool
 " pretty xml
 command PrettyXML %!xmllint --format -
 
-autocmd BufNewFile,BufRead *.json PrettyJSON
+autocmd BufRead *.json PrettyJSON
 autocmd BufNewFile,BufRead *.xml, *.rss, *.wsdl PrettyXML
