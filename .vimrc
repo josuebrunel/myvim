@@ -136,9 +136,12 @@ import sys
 if 'VIRTUAL_ENV' in os.environ:
   project_base_dir = os.environ['VIRTUAL_ENV']
   activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-  code = compile(open(activate_this).read(), 'activate_this', 'exec')
-  exec(code, globals(), locals())
-  # execfile(activate_this, dict(__file__=activate_this))
+
+  def execfile(filename, *args, **kwargs):
+      code = compile(open(activate_this).read(), 'activate_this', 'exec')
+      exec(code, *args, **kwargs)
+
+  execfile(activate_this, dict(__file__=activate_this))
 EOF
 
 "flake8 ignore line too long
